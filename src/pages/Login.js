@@ -1,0 +1,19 @@
+import React from 'react'
+import { auth, provider } from '../firebase/firebaseConfig'
+import { signInWithPopup } from 'firebase/auth'
+const Login = ({ setIsAuth }) => {
+    const signInGoogle = () => {
+        signInWithPopup(auth, provider).then((results) => {
+            localStorage.setItem('isAuth', true);
+            setIsAuth(true);
+        })
+    }
+    return (
+        <div className="login-page">
+            <h1>Sign In With Google to Continue</h1>
+            <button className="login-with-google-btn" onClick={signInGoogle}>Sign in with Google</button>
+        </div>
+    )
+}
+
+export default Login

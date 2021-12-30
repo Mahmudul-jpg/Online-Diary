@@ -17,11 +17,11 @@ function App() {
     })
   }
   return (
-    <div>
+    <div >
       <nav>
-        <NavLink to='/'>Home</NavLink>
-        <NavLink to='/createpost'>Create-Post</NavLink>
-        {!isAuth ? <NavLink to='/login'>Login</NavLink> : <button onClick={logOut}>Log Out</button>}
+        <NavLink className="navLink" to='/'>Home</NavLink>
+        <NavLink className="navLink" to='/createpost'>Create-Post</NavLink>
+        {!isAuth ? <NavLink className="navLink" to='/login'>Login</NavLink> : <button className="btn-logout" onClick={logOut}>Log Out</button>}
       </nav>
       <Routes>
         <Route path='/' element={<Home />} />

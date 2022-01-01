@@ -1,9 +1,10 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { addDoc, collection } from 'firebase/firestore'
 import './Page.css'
 import { db, auth } from '../firebase/firebaseConfig'
 import { useNavigate } from 'react-router-dom'
-const CreatePost = () => {
+
+const CreatePost = ({ isAuth }) => {
     const [title, setTitle] = useState('')
     const [post, setPost] = useState('')
     const postsDiary = collection(db, "diary")
@@ -12,6 +13,11 @@ const CreatePost = () => {
         await addDoc(postsDiary, { title, post, author: { name: auth.currentUser.displayName, id: auth.currentUser.uid }, })
         navigate('/')
     }
+    useEffect(() => {
+        if (!isAuth) {
+            navigate("/login");
+        }
+    }, [])
     return (
         <div className="createPostPage">
             <div className="cpContainer">

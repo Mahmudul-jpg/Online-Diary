@@ -20,12 +20,15 @@ function App() {
     <div >
       <nav>
         <NavLink className="navLink" to='/'>Home</NavLink>
-        <NavLink className="navLink" to='/createpost'>Create-Post</NavLink>
-        {!isAuth ? <NavLink className="navLink" to='/login'>Login</NavLink> : <button className="btn-logout" onClick={logOut}>Log Out</button>}
+        {!isAuth ? (<NavLink className="navLink" to='/login'>Login</NavLink>) : (
+          <>
+            <NavLink className="navLink" to='/createpost'>Create-Post</NavLink><button className="btn-logout" onClick={logOut}>Log Out</button>
+          </>
+        )}
       </nav>
       <Routes>
         <Route path='/' element={<Home />} />
-        <Route path='/createpost' element={<CreatePost />} />
+        <Route path='/createpost' element={<CreatePost isAuth={isAuth} />} />
         <Route path='/login' element={<Login setIsAuth={setIsAuth} />} />
       </Routes>
 

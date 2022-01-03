@@ -124,3 +124,26 @@ textarea {
   .postHeader .title {
     flex: 50%;
   }
+  .postHeader .delete {
+    flex: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  
+  .delete button {
+    border: none;
+  
+    background: none;
+    font-size: 30px;
+    cursor: pointer;
+  }
+
+  .post .post-text{
+    word-wrap: break-word;
+    height: auto;
+    max-height: 400px;
+    width: 100%;
+    overflow: hidden;
+    overflow-y: auto;
+  }

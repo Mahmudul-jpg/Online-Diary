@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { getDocs, collection, deleteDoc, doc } from 'firebase/firestore'
 import { db } from '../firebase/firebaseConfig'
-// import './Page.css'
+import './Page.css'
 const Home = () => {
     const [postList, setPostList] = useState([])
     const postsDiary = collection(db, "diary")
@@ -28,9 +28,9 @@ const Home = () => {
                         <div className="delete" onClick={() => { deletePost(post.id) }}>
                             <button>&#128465;</button></div>
                         <div className="post-text">{post.post}</div>
-
+                        <h3>@{post.author.name}</h3>
                     </div>
-                    {/* <h3>@{post.author.name}</h3> */}
+
                 </div>)
 
             })}

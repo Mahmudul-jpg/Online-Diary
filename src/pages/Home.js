@@ -24,11 +24,17 @@ const Home = () => {
                     <div className="postHeader">
                         <div className='title'>
                             <h1>{post.title}</h1>
+
                         </div>
-                        <div className="delete" onClick={() => { deletePost(post.id) }}>
-                            <button>&#128465;</button></div>
+                        {/* <div className="delete" onClick={() => { deletePost(post.id) }}>
+                            <button>&#128465;</button></div> */}
                         <div className="post-text">{post.post}</div>
-                        <h3>@{post.author.name}</h3>
+
+                        <div className="below">
+                            <h3>@{post.author.name}</h3>
+                            <div className="delete" onClick={() => { deletePost(post.id) }}>
+                                <button>&#128465;</button></div>
+                        </div>
                     </div>
 
                 </div>)

@@ -110,33 +110,46 @@ textarea {
     max-height: 600px;
     background-color: rgb(250, 250, 250);
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    margin: 20px;
+    margin: 50px;
     padding: 20px;
     border-radius: 15px;
   }
-  
-  .post .postHeader {
-    display: flex;
+  .homepage .post{
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(247, 236, 236);
+  }
+  .post{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 40%;
+    border-radius: 5px;
+   
+  }
+   .postHeader {
+    /* display: flex; */
     justify-content: center;
     width: 100%;
+    text-align: center;
+    margin: 0px auto;
+    display: block;
   }
   
   .postHeader .title {
-    flex: 50%;
+    /* flex: 50%; */
+    display: flex;
   }
-  .postHeader .delete {
+ .delete {
     flex: 50%;
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
-  }
-  
-  .delete button {
-    border: none;
-  
-    background: none;
-    font-size: 30px;
+    align-items: flex-end; 
+   }    
+  .delete button{
+    font-size: 50px;
     cursor: pointer;
+    background:none;
+    border:none;
   }
 
   .post .post-text{
@@ -146,4 +159,7 @@ textarea {
     width: 100%;
     overflow: hidden;
     overflow-y: auto;
+  } 
+  .below{
+    display:flex;
   }

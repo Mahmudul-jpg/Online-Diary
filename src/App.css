@@ -19,6 +19,7 @@ nav{
   display: grid;
  grid-template-columns: repeat(3, 1fr);
   text-align: center;
+  width: 100%;
 } 
 a{
   color:azure;
@@ -36,4 +37,9 @@ a{
 }
 .navLink:hover{
 color:royalblue;
+}
+@media only screen and (max-width: 768px) {
+  nav{
+    min-width: 100%;
+  }
 }

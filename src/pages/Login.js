@@ -6,7 +6,7 @@ import './Page.css'
 const Login = ({ setIsAuth }) => {
     let navigate = useNavigate()
     const signInGoogle = () => {
-        signInWithPopup(auth, provider).then((results) => {
+        signInWithPopup(auth, provider).then((result) => {
             localStorage.setItem('isAuth', true);
             setIsAuth(true);
             navigate('/')

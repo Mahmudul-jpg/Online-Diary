@@ -1,6 +1,6 @@
 import React from 'react'
 import './App.css';
-import { Routes, Route, NavLink } from 'react-router-dom';
+import { Routes, Route, NavLink, useNavigate } from 'react-router-dom';
 import Home from './pages/Home'
 import CreatePost from './pages/CreatePost'
 import Login from './pages/Login'
@@ -9,11 +9,13 @@ import { signOut } from 'firebase/auth'
 import { auth } from './firebase/firebaseConfig'
 function App() {
   const [isAuth, setIsAuth] = useState(false)
+  let navigate = useNavigate()
   const logOut = () => {
     signOut(auth).then(() => {
       localStorage.clear()
       setIsAuth(false)
-      window.location.pathname = '/login'
+      // window.location.pathname = '/login'
+      navigate("/login")
     })
   }
   return (
@@ -27,7 +29,7 @@ function App() {
         )}
       </nav>
       <Routes>
-        <Route path='/' element={<Home />} />
+        <Route path='/' element={<Home isAuth={isAuth} />} />
         <Route path='/createpost' element={<CreatePost isAuth={isAuth} />} />
         <Route path='/login' element={<Login setIsAuth={setIsAuth} />} />
       </Routes>

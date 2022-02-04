@@ -24,12 +24,12 @@ const CreatePost = ({ isAuth }) => {
                 <h1 >Create a post</h1>
                 <div className="input">
                     <label>Title: </label>
-                    <input placeholder="Give your title" onChange={(e) => { setTitle(e.target.value); }} />
+                    <input placeholder="Give your title" onChange={(event) => { setTitle(event.target.value); }} />
                 </div>
                 <br />
                 <div className="input">
                     <label>Post: </label>
-                    <textarea placeholder="Post your blog" onChange={(e) => { setPost(e.target.value); }} />
+                    <textarea placeholder="Post your blog" onChange={(event) => { setPost(event.target.value); }} />
                 </div>
                 <br />
                 <button onClick={createPost}>Submit Post</button>

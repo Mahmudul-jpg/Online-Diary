@@ -8,7 +8,7 @@ import { useState } from 'react'
 import { signOut } from 'firebase/auth'
 import { auth } from './firebase/firebaseConfig'
 function App() {
-  const [isAuth, setIsAuth] = useState(false)
+  const [isAuth, setIsAuth] = useState(localStorage.getItem("isAuth"))
   let navigate = useNavigate()
   const logOut = () => {
     signOut(auth).then(() => {

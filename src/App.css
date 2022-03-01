@@ -40,6 +40,9 @@ color:royalblue;
 }
 @media only screen and (max-width: 768px) {
   nav{
-    min-width: 100%;
+    width: 100%;
+  }
+  .btn-logout{
+width: 50%;
   }
 }

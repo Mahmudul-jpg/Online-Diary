@@ -104,47 +104,23 @@ textarea {
     box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.04), 0 1px 1px rgba(0, 0, 0, 0.25);
     cursor: not-allowed;
   }
-  .homePage {
-    width: 100%;
-    min-height: calc(100vh - 80px);
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 20px;
-  }
-   .homePage .post {
-    width: 600px;
-    height: auto;
-    max-height: 600px;
-    background-color: rgb(250, 250, 250);
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    margin: 50px;
-    padding: 20px;
-    border-radius: 15px;
-  }
-  .homepage .post{
-    margin-left: auto;
-    margin-right: auto;
-    background-color: rgb(247, 236, 236);
-    transition: 0.3s;
-    width: 40%;
-    border-radius: 5px;
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-  }
- 
    .postHeader {
      display: flex; 
      justify-content: center;
-    width: 100%;
+    width: 80%;
     text-align: center;
     margin: 0px auto;
+    margin-bottom: 20px;
     display: block;
+    background-color:whitesmoke;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
   } 
   
   .postHeader .title { 
      flex: 50%; 
-     display: flex;
+     text-align: center;
+     color:blueviolet;
   }
  .delete {
     flex: 50%;
@@ -175,7 +151,8 @@ textarea {
     .cpContainer{
       width:80%;
     }
+    .postHeader{
+      width:50%;
+     
+    }
   }
-  /* 483
-  ×
-  698 */
